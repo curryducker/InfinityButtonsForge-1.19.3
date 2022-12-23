@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "infinitybuttons:block/torches/minecraft/redstone_torch_off"
+    },
+    "lit=true": {
+      "model": "infinitybuttons:block/torches/minecraft/redstone_torch"
+    }
+  }
+}
