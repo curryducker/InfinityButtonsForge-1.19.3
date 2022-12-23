@@ -303,21 +303,33 @@ public class CreativeTabEvents {
     }
     @SubscribeEvent
     public static void addButtonsToVanillaTabs(CreativeModeTabEvent.BuildContents event) {
-        addAfterInBuildingBlocks(event,Items.STONE_BUTTON, InfinityButtonsBlocks.STONE_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event,Items.OAK_BUTTON, InfinityButtonsBlocks.OAK_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event,Items.SPRUCE_BUTTON, InfinityButtonsBlocks.SPRUCE_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event,Items.BIRCH_BUTTON, InfinityButtonsBlocks.BIRCH_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event,Items.JUNGLE_BUTTON, InfinityButtonsBlocks.JUNGLE_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event,Items.ACACIA_BUTTON, InfinityButtonsBlocks.ACACIA_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event,Items.DARK_OAK_BUTTON, InfinityButtonsBlocks.DARK_OAK_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event,Items.MANGROVE_BUTTON, InfinityButtonsBlocks.MANGROVE_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event,Items.CRIMSON_BUTTON, InfinityButtonsBlocks.CRIMSON_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event,Items.WARPED_BUTTON, InfinityButtonsBlocks.WARPED_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event,Items.POLISHED_BLACKSTONE_BUTTON, InfinityButtonsBlocks.POLISHED_BLACKSTONE_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.OAK_BUTTON, InfinityButtonsBlocks.OAK_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.SPRUCE_BUTTON, InfinityButtonsBlocks.SPRUCE_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.BIRCH_BUTTON, InfinityButtonsBlocks.BIRCH_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.JUNGLE_BUTTON, InfinityButtonsBlocks.JUNGLE_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.ACACIA_BUTTON, InfinityButtonsBlocks.ACACIA_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.DARK_OAK_BUTTON, InfinityButtonsBlocks.DARK_OAK_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.MANGROVE_BUTTON, InfinityButtonsBlocks.MANGROVE_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.CRIMSON_BUTTON, InfinityButtonsBlocks.CRIMSON_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.WARPED_BUTTON, InfinityButtonsBlocks.WARPED_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.STONE_BUTTON, InfinityButtonsBlocks.STONE_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.GRANITE_WALL, InfinityButtonsBlocks.GRANITE_BUTTON.get());
+        addAfterInBuildingBlocks(event, InfinityButtonsBlocks.GRANITE_BUTTON.get().asItem(), InfinityButtonsBlocks.GRANITE_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.DIORITE_WALL, InfinityButtonsBlocks.DIORITE_BUTTON.get());
+        addAfterInBuildingBlocks(event, InfinityButtonsBlocks.DIORITE_BUTTON.get().asItem(), InfinityButtonsBlocks.DIORITE_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.ANDESITE_WALL, InfinityButtonsBlocks.ANDESITE_BUTTON.get());
+        addAfterInBuildingBlocks(event, InfinityButtonsBlocks.ANDESITE_BUTTON.get().asItem(), InfinityButtonsBlocks.ANDESITE_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.PRISMARINE_WALL, InfinityButtonsBlocks.PRISMARINE_BUTTON.get());
+        addAfterInBuildingBlocks(event, InfinityButtonsBlocks.PRISMARINE_BUTTON.get().asItem(), InfinityButtonsBlocks.PRISMARINE_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.PRISMARINE_BRICK_SLAB, InfinityButtonsBlocks.PRISMARINE_BRICK_BUTTON.get());
+        addAfterInBuildingBlocks(event, InfinityButtonsBlocks.PRISMARINE_BRICK_BUTTON.get().asItem(), InfinityButtonsBlocks.PRISMARINE_BRICK_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.DARK_PRISMARINE_SLAB, InfinityButtonsBlocks.DARK_PRISMARINE_BUTTON.get());
+        addAfterInBuildingBlocks(event, InfinityButtonsBlocks.DARK_PRISMARINE_BUTTON.get().asItem(), InfinityButtonsBlocks.DARK_PRISMARINE_LARGE_BUTTON.get());
+        addAfterInBuildingBlocks(event, Items.POLISHED_BLACKSTONE_BUTTON, InfinityButtonsBlocks.POLISHED_BLACKSTONE_LARGE_BUTTON.get());
 
-        addAfterInRedstone(event,Items.STONE_BUTTON, InfinityButtonsBlocks.COPPER_BUTTON.get());
-        addAfterInRedstone(event, Item.byBlock(InfinityButtonsBlocks.COPPER_BUTTON.get()), InfinityButtonsBlocks.STICKY_COPPER_BUTTON.get());
-        addAfterInRedstone(event,Items.REDSTONE_TORCH, InfinityButtonsBlocks.REDSTONE_TORCH_LEVER.get());
+        addAfterInRedstone(event, Items.STONE_BUTTON, InfinityButtonsBlocks.COPPER_BUTTON.get());
+        addAfterInRedstone(event, InfinityButtonsBlocks.COPPER_BUTTON.get().asItem(), InfinityButtonsBlocks.STICKY_COPPER_BUTTON.get());
+        addAfterInRedstone(event, Items.REDSTONE_TORCH, InfinityButtonsBlocks.REDSTONE_TORCH_LEVER.get());
 
         addToColoredBlocks(event, InfinityButtonsBlocks.WHITE_CONCRETE_POWDER_BUTTON.get());
         addToColoredBlocks(event, InfinityButtonsBlocks.LIGHT_GRAY_CONCRETE_POWDER_BUTTON.get());
