@@ -412,7 +412,7 @@ public class InfinityButtonsBlocks {
     }
 
     private static RegistryObject<Block> registerNetherPlankSecretButton(String wood, MaterialColor materialColor) {
-        return registerBlock(wood + "_plank_secret_button", () -> new PlankSecretButton(BlockBehaviour.Properties.of(Material.NETHER_WOOD, materialColor).strength(2.0f, 3.0f).noOcclusion().sound(SoundType.WOOD)));
+        return registerBlock(wood + "_plank_secret_button", () -> new PlankSecretButton(BlockBehaviour.Properties.of(Material.NETHER_WOOD, materialColor).strength(2.0f, 3.0f).noOcclusion().sound(SoundType.NETHER_WOOD)));
     }
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
