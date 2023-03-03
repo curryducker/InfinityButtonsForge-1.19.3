@@ -1,5 +1,7 @@
 package net.larsmans.infinitybuttons.block.custom.button;
 
+import me.shedaniel.autoconfig.AutoConfig;
+import net.larsmans.infinitybuttons.InfinityButtonsConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -30,6 +32,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public abstract class AbstractButton extends FaceAttachedHorizontalDirectionalBlock {
+    protected InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
     public static final BooleanProperty PRESSED = BooleanProperty.create("pressed");
 
     protected static final VoxelShape CEILING_X_SHAPE = Block.box(6.0, 14.0, 5.0, 10.0, 16.0, 11.0);
