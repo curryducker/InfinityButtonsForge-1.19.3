@@ -12,6 +12,7 @@ import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PropelWallTorchButton extends WallTorchButton {
@@ -24,8 +25,11 @@ public class PropelWallTorchButton extends WallTorchButton {
     public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, RandomSource rand) {
     }
 
+    //Untested
     @Override
     public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-        return List.of(new ItemStack(NethersDelightItems.PROPELPLANT_TORCH_BUTTON.get()));
+        List<ItemStack> list = new ArrayList<>();
+        list.add(new ItemStack(NethersDelightItems.PROPELPLANT_TORCH_BUTTON.get()));
+        return list;
     }
 }

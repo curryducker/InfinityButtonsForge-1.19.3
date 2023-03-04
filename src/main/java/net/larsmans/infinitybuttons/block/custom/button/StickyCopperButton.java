@@ -1,8 +1,6 @@
 package net.larsmans.infinitybuttons.block.custom.button;
 
-import me.shedaniel.autoconfig.AutoConfig;
-import net.larsmans.infinitybuttons.InfinityButtonsConfig;
-import net.minecraft.client.gui.screens.Screen;
+import net.larsmans.infinitybuttons.block.InfinityButtonsUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
@@ -26,10 +24,9 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class StickyCopperButton extends AbstractButton {
-    InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
 
-    public StickyCopperButton(BlockBehaviour.Properties properties) {
-        super(false, properties);
+    public StickyCopperButton(BlockBehaviour.Properties properties, boolean large) {
+        super(false, large, properties);
     }
 
     @Override
@@ -73,13 +70,7 @@ public class StickyCopperButton extends AbstractButton {
     @Override
     @OnlyIn(Dist.CLIENT)
     public void appendHoverText(ItemStack pStack, @org.jetbrains.annotations.Nullable BlockGetter pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
-        if (config.tooltips) {
-            if(Screen.hasShiftDown()) {
-                pTooltip.add(Component.translatable("infinitybuttons.tooltip.sticky_copper_button"));
-            } else {
-                pTooltip.add(Component.translatable("infinitybuttons.tooltip.hold_shift"));
-            }
-        }
+        InfinityButtonsUtil.tooltip(pTooltip, "sticky_copper_button");
         super.appendHoverText(pStack, pLevel, pTooltip, pFlag);
     }
 }
