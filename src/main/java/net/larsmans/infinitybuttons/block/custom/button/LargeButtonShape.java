@@ -20,7 +20,7 @@ public abstract class LargeButtonShape extends AbstractButton {
     private static final VoxelShape CEILING_PRESSED_SHAPE = Block.box(4, 15, 4, 12, 16, 12);
 
     protected LargeButtonShape(boolean projectile, Properties properties, boolean large) {
-        super(projectile, large, properties);
+        super(projectile, properties);
     }
 
     public static VoxelShape outlineShape(BlockState state) {
