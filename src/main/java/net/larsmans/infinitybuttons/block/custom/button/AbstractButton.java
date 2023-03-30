@@ -32,7 +32,7 @@ public abstract class AbstractButton extends FaceAttachedHorizontalDirectionalBl
     protected static InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
     public static final BooleanProperty PRESSED = BooleanProperty.create("pressed");
 
-    private final boolean projectile;
+    protected final boolean projectile;
 
     protected AbstractButton(boolean projectile, Properties properties) {
         super(properties);
