@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public abstract class AbstractButton extends FaceAttachedHorizontalDirectionalBlock {
-    protected InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
+    protected static InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
     public static final BooleanProperty PRESSED = BooleanProperty.create("pressed");
 
     private final boolean projectile;
