@@ -14,11 +14,8 @@ public class FullCompatBrickSecretButton extends FullBlockBrickSecretButton {
         super(properties);
     }
 
-    //Untested
     @Override
     public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-        List<ItemStack> list = new ArrayList<>();
-        list.add(new ItemStack(this));
-        return list;
+        return List.of(new ItemStack(this));
     }
 }

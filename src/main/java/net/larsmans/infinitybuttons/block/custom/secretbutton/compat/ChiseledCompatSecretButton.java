@@ -13,12 +13,8 @@ public class ChiseledCompatSecretButton extends ChiseledStoneBrickSecretButton {
         super(properties);
     }
 
-    //Untested
-    //TODO test compat drops
     @Override
     public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-        List<ItemStack> list = new ArrayList<>();
-        list.add(new ItemStack(this));
-        return list;
+        return List.of(new ItemStack(this));
     }
 }

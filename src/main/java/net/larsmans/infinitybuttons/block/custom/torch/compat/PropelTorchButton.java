@@ -25,11 +25,8 @@ public class PropelTorchButton extends TorchButton {
     public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, RandomSource rand) {
     }
 
-    //Untested
     @Override
     public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-        List<ItemStack> list = new ArrayList<>();
-        list.add(new ItemStack(NethersDelightItems.PROPELPLANT_TORCH_BUTTON.get()));
-        return list;
+        return List.of(new ItemStack(NethersDelightItems.PROPELPLANT_TORCH_BUTTON.get()));
     }
 }
