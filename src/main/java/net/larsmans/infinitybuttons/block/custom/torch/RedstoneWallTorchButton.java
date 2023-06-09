@@ -22,8 +22,8 @@ import javax.annotation.Nullable;
 public class RedstoneWallTorchButton extends RedstoneTorchButton {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
-    public RedstoneWallTorchButton(Properties properties) {
-        super(properties);
+    public RedstoneWallTorchButton(Properties properties, Block jadeBlock) {
+        super(properties, jadeBlock);
         this.registerDefaultState(this.stateDefinition.any().setValue(LIT, false).setValue(FACING, Direction.NORTH));
     }
 
@@ -64,10 +64,7 @@ public class RedstoneWallTorchButton extends RedstoneTorchButton {
 
     @Override
     public int getSignal(BlockState blockState, BlockGetter blockAccess, BlockPos pos, Direction side) {
-        if (blockState.getValue(LIT) && blockState.getValue(FACING) != side) {
-            return 15;
-        }
-        return 0;
+        return (blockState.getValue(LIT) && blockState.getValue(FACING) != side) ? 15 : 0;
     }
 
     @Override

@@ -1,16 +1,17 @@
 package net.larsmans.infinitybuttons.block.custom.secretbutton.compat;
 
+import net.larsmans.infinitybuttons.block.custom.secretbutton.ChiseledNetherBrickSecretButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.ChiseledStoneBrickSecretButton;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootContext;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class ChiseledCompatSecretButton extends ChiseledStoneBrickSecretButton {
-    public ChiseledCompatSecretButton(Properties properties) {
-        super(properties);
+public class ChiseledCompatSecretButton extends ChiseledNetherBrickSecretButton {
+    public ChiseledCompatSecretButton(Properties properties, Block jadeBlock) {
+        super(properties, jadeBlock);
     }
 
     @Override

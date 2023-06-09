@@ -24,10 +24,12 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class RedstoneTorchButton extends TorchBlock {
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
+    public final Block jadeBlock;
 
-    public RedstoneTorchButton(Properties properties) {
+    public RedstoneTorchButton(Properties properties, Block jadeBlock) {
         super(properties, DustParticleOptions.REDSTONE);
         this.registerDefaultState(this.stateDefinition.any().setValue(LIT, false));
+        this.jadeBlock = jadeBlock;
     }
 
     @Override
@@ -73,7 +75,7 @@ public class RedstoneTorchButton extends TorchBlock {
 
     @Override
     public int getDirectSignal(BlockState blockState, BlockGetter blockAccess, BlockPos pos, Direction side) {
-        return side == Direction.DOWN ? blockState.getSignal(blockAccess, pos, side) : 0;
+        return (side == Direction.DOWN) ? blockState.getSignal(blockAccess, pos, side) : 0;
     }
 
     @Override

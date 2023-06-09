@@ -2,10 +2,7 @@ package net.larsmans.infinitybuttons.events;
 
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
-import net.larsmans.infinitybuttons.compat.NethersDelightBlocks;
-import net.larsmans.infinitybuttons.compat.NethersDelightItems;
-import net.larsmans.infinitybuttons.compat.QuarkBlocks;
-import net.larsmans.infinitybuttons.compat.WoodworksBlocks;
+import net.larsmans.infinitybuttons.compat.*;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -219,8 +216,31 @@ public class CreativeTabEvents {
                         if (ModList.get().isLoaded("quark")) {
                             output.accept(new ItemStack(QuarkBlocks.AZALEA_BOOKSHELF_SECRET_BUTTON.get()));
                             output.accept(new ItemStack(QuarkBlocks.BLOSSOM_BOOKSHELF_SECRET_BUTTON.get()));
+                            if (ModList.get().isLoaded("environmental")) {
+                                output.accept(new ItemStack(EnvironmentalBlocks.WILLOW_BOOKSHELF_SECRET_BUTTON.get()));
+                                output.accept(new ItemStack(EnvironmentalBlocks.CHERRY_BOOKSHELF_SECRET_BUTTON.get()));
+                                output.accept(new ItemStack(EnvironmentalBlocks.WISTERIA_BOOKSHELF_SECRET_BUTTON.get()));
+                            }
+                            if (ModList.get().isLoaded("autumnity")) {
+                                output.accept(new ItemStack(AutumnityBlocks.MAPLE_BOOKSHELF_SECRET_BUTTON.get()));
+                            }
+                            if (ModList.get().isLoaded("atmospheric")) {
+                                output.accept(new ItemStack(AtmosphericBlocks.ROSEWOOD_BOOKSHELF_SECRET_BUTTON.get()));
+                                output.accept(new ItemStack(AtmosphericBlocks.MORADO_BOOKSHELF_SECRET_BUTTON.get()));
+                                output.accept(new ItemStack(AtmosphericBlocks.YUCCA_BOOKSHELF_SECRET_BUTTON.get()));
+                                output.accept(new ItemStack(AtmosphericBlocks.KOUSA_BOOKSHELF_SECRET_BUTTON.get()));
+                                output.accept(new ItemStack(AtmosphericBlocks.ASPEN_BOOKSHELF_SECRET_BUTTON.get()));
+                                output.accept(new ItemStack(AtmosphericBlocks.GRIMWOOD_BOOKSHELF_SECRET_BUTTON.get()));
+                            }
+                            if (ModList.get().isLoaded("upgrade_aquatic")) {
+                                output.accept(new ItemStack(UpgradeAquaticBlocks.DRIFTWOOD_BOOKSHELF_SECRET_BUTTON.get()));
+                                output.accept(new ItemStack(UpgradeAquaticBlocks.RIVER_BOOKSHELF_SECRET_BUTTON.get()));
+                            }
                         }
                         output.accept(new ItemStack(InfinityButtonsBlocks.BRICK_SECRET_BUTTON.get()));
+                        if (ModList.get().isLoaded("clayworks")) {
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_BRICK_SECRET_BUTTON.get()));
+                        }
                         if (ModList.get().isLoaded("quark")) {
                             output.accept(new ItemStack(QuarkBlocks.PERMAFROST_BRICK_SECRET_BUTTON.get()));
                         }
@@ -264,6 +284,9 @@ public class CreativeTabEvents {
                         output.accept(new ItemStack(InfinityButtonsBlocks.CRIMSON_PLANK_SECRET_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.WARPED_PLANK_SECRET_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.MUD_BRICK_SECRET_BUTTON.get()));
+                        if (ModList.get().isLoaded("environmental")) {
+                            output.accept(new ItemStack(EnvironmentalBlocks.CHISELED_MUD_BRICK_SECRET_BUTTON.get()));
+                        }
                         output.accept(new ItemStack(InfinityButtonsBlocks.END_STONE_BRICK_SECRET_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.QUARTZ_BRICK_SECRET_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.DARK_PRISMARINE_SECRET_BUTTON.get()));
@@ -276,6 +299,62 @@ public class CreativeTabEvents {
                         output.accept(new ItemStack(InfinityButtonsBlocks.RED_NETHER_BRICK_SECRET_BUTTON.get()));
                         if (ModList.get().isLoaded("quark")) {
                             output.accept(new ItemStack(QuarkBlocks.BLUE_NETHER_BRICK_SECRET_BUTTON.get()));
+                        }
+
+                        if (ModList.get().isLoaded("clayworks")) {
+                            output.accept(new ItemStack(ClayworksBlocks.TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.WHITE_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_WHITE_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_LIGHT_GRAY_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.GRAY_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_GRAY_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.BLACK_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_BLACK_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.BROWN_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_BROWN_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.RED_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_RED_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.ORANGE_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_ORANGE_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.YELLOW_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_YELLOW_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.LIME_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_LIME_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.GREEN_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_GREEN_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CYAN_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_CYAN_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_LIGHT_BLUE_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.BLUE_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_BLUE_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.PURPLE_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_PURPLE_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.MAGENTA_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_MAGENTA_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.PINK_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(ClayworksBlocks.CHISELED_PINK_TERRACOTTA_BRICK_SECRET_BUTTON.get()));
+                        }
+
+                        if (ModList.get().isLoaded("buzzier_bees")) {
+                            output.accept(new ItemStack(BuzzierBeesBlocks.HONEYCOMB_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(BuzzierBeesBlocks.CHISELED_HONEYCOMB_BRICK_SECRET_BUTTON.get()));
+                        }
+                        if (ModList.get().isLoaded("neapolitan")) {
+                            output.accept(new ItemStack(NeapolitanBlocks.CHISELED_CHOCOLATE_BRICK_SECRET_BUTTON.get()));
+                        }
+                        if (ModList.get().isLoaded("savage_and_ravage")) {
+                            output.accept(new ItemStack(SavageAndRavageBlocks.CHISELED_GLOOMY_TILE_SECRET_BUTTON.get()));
+                        }
+                        if (ModList.get().isLoaded("upgrade_aquatic")) {
+                            output.accept(new ItemStack(UpgradeAquaticBlocks.KELPY_STONE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(UpgradeAquaticBlocks.TONGUE_KELPY_STONE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(UpgradeAquaticBlocks.THORNY_KELPY_STONE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(UpgradeAquaticBlocks.OCHRE_KELPY_STONE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(UpgradeAquaticBlocks.POLAR_KELPY_STONE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(UpgradeAquaticBlocks.CHISELED_TOOTH_BRICK_SECRET_BUTTON.get()));
                         }
 
                         output.accept(new ItemStack(InfinityButtonsBlocks.DOORBELL.get()));

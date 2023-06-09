@@ -7,17 +7,17 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PropelWallTorchButton extends WallTorchButton {
-    public PropelWallTorchButton(Properties properties) {
-        super(properties, ParticleTypes.FLAME);
+    public PropelWallTorchButton(Properties properties, Block jadeBlock) {
+        super(properties, ParticleTypes.FLAME, jadeBlock);
     }
 
     @Override
