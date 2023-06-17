@@ -288,6 +288,7 @@ public class CreativeTabEvents {
                             output.accept(new ItemStack(EnvironmentalBlocks.CHISELED_MUD_BRICK_SECRET_BUTTON.get()));
                         }
                         output.accept(new ItemStack(InfinityButtonsBlocks.END_STONE_BRICK_SECRET_BUTTON.get()));
+                        output.accept(new ItemStack(InfinityButtonsBlocks.PURPUR_BLOCK_SECRET_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.QUARTZ_BRICK_SECRET_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.DARK_PRISMARINE_SECRET_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.POLISHED_BLACKSTONE_BRICK_SECRET_BUTTON.get()));
@@ -355,6 +356,38 @@ public class CreativeTabEvents {
                             output.accept(new ItemStack(UpgradeAquaticBlocks.OCHRE_KELPY_STONE_BRICK_SECRET_BUTTON.get()));
                             output.accept(new ItemStack(UpgradeAquaticBlocks.POLAR_KELPY_STONE_BRICK_SECRET_BUTTON.get()));
                             output.accept(new ItemStack(UpgradeAquaticBlocks.CHISELED_TOOTH_BRICK_SECRET_BUTTON.get()));
+                        }
+                        if (ModList.get().isLoaded("create")) {
+                            output.accept(new ItemStack(CreateBlocks.ROSE_QUARTZ_TILE_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.SMALL_ROSE_QUARTZ_TILE_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.CUT_GRANITE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.SMALL_GRANITE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.CUT_DIORITE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.SMALL_DIORITE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.CUT_ANDESITE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.SMALL_ANDESITE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.CUT_CALCITE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.SMALL_CALCITE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.CUT_DRIPSTONE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.SMALL_DRIPSTONE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.CUT_DEEPSLATE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.SMALL_DEEPSLATE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.CUT_TUFF_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.SMALL_TUFF_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.CUT_ASURINE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.SMALL_ASURINE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.CUT_CRIMSITE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.SMALL_CRIMSITE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.CUT_LIMESTONE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.SMALL_LIMESTONE_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.CUT_OCHRUM_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.SMALL_OCHRUM_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.CUT_SCORIA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.SMALL_SCORIA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.CUT_SCORCHIA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.SMALL_SCORCHIA_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.CUT_VERIDIUM_BRICK_SECRET_BUTTON.get()));
+                            output.accept(new ItemStack(CreateBlocks.SMALL_VERIDIUM_BRICK_SECRET_BUTTON.get()));
                         }
 
                         output.accept(new ItemStack(InfinityButtonsBlocks.DOORBELL.get()));
