@@ -61,7 +61,7 @@ public abstract class AbstractButton extends FaceAttachedHorizontalDirectionalBl
     }
 
     protected void playSound(@Nullable Player playerIn, LevelAccessor worldIn, BlockPos pos, boolean pressed) {
-        worldIn.playSound(pressed ? playerIn : null, pos, this.getSoundEvent(pressed), SoundSource.BLOCKS, 0.3f, pressed ? 0.6f : 0.5f);
+        worldIn.playSound(pressed ? playerIn : null, pos, this.getSoundEvent(pressed), SoundSource.BLOCKS);
     }
 
     protected abstract SoundEvent getSoundEvent(boolean pressed);

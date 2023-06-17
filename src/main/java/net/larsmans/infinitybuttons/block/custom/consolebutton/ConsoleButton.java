@@ -31,7 +31,7 @@ public class ConsoleButton extends AbstractLeverableButton {
 
     @Override
     protected SoundEvent getSoundEvent(boolean pressed) {
-        return SoundEvents.STONE_BUTTON_CLICK_ON;
+        return pressed ? SoundEvents.STONE_BUTTON_CLICK_ON : SoundEvents.STONE_BUTTON_CLICK_OFF;
     }
 
     @Override
