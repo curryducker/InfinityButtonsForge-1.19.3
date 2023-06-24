@@ -44,6 +44,10 @@ public class CreativeTabEvents {
                         output.accept(new ItemStack(InfinityButtonsBlocks.EXPOSED_COPPER_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.WEATHERED_COPPER_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.OXIDIZED_COPPER_BUTTON.get()));
+                        output.accept(new ItemStack(InfinityButtonsBlocks.WAXED_COPPER_BUTTON.get()));
+                        output.accept(new ItemStack(InfinityButtonsBlocks.WAXED_EXPOSED_COPPER_BUTTON.get()));
+                        output.accept(new ItemStack(InfinityButtonsBlocks.WAXED_WEATHERED_COPPER_BUTTON.get()));
+                        output.accept(new ItemStack(InfinityButtonsBlocks.WAXED_OXIDIZED_COPPER_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.STICKY_COPPER_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.STICKY_EXPOSED_COPPER_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.STICKY_WEATHERED_COPPER_BUTTON.get()));
@@ -97,6 +101,10 @@ public class CreativeTabEvents {
                         output.accept(new ItemStack(InfinityButtonsBlocks.EXPOSED_COPPER_LARGE_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.WEATHERED_COPPER_LARGE_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.OXIDIZED_COPPER_LARGE_BUTTON.get()));
+                        output.accept(new ItemStack(InfinityButtonsBlocks.WAXED_COPPER_LARGE_BUTTON.get()));
+                        output.accept(new ItemStack(InfinityButtonsBlocks.WAXED_EXPOSED_COPPER_LARGE_BUTTON.get()));
+                        output.accept(new ItemStack(InfinityButtonsBlocks.WAXED_WEATHERED_COPPER_LARGE_BUTTON.get()));
+                        output.accept(new ItemStack(InfinityButtonsBlocks.WAXED_OXIDIZED_COPPER_LARGE_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.STICKY_COPPER_LARGE_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.STICKY_EXPOSED_COPPER_LARGE_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.STICKY_WEATHERED_COPPER_LARGE_BUTTON.get()));
@@ -453,7 +461,8 @@ public class CreativeTabEvents {
         addAfterInBuildingBlocks(event, Items.POLISHED_BLACKSTONE_BUTTON, InfinityButtonsBlocks.POLISHED_BLACKSTONE_LARGE_BUTTON.get());
 
         addAfterInRedstone(event, Items.STONE_BUTTON, InfinityButtonsBlocks.COPPER_BUTTON.get());
-        addAfterInRedstone(event, InfinityButtonsBlocks.COPPER_BUTTON.get().asItem(), InfinityButtonsBlocks.STICKY_COPPER_BUTTON.get());
+        addAfterInRedstone(event, InfinityButtonsBlocks.COPPER_BUTTON.get().asItem(), InfinityButtonsBlocks.WAXED_COPPER_BUTTON.get());
+        addAfterInRedstone(event, InfinityButtonsBlocks.WAXED_COPPER_BUTTON.get().asItem(), InfinityButtonsBlocks.STICKY_COPPER_BUTTON.get());
         addAfterInRedstone(event, Items.REDSTONE_TORCH, InfinityButtonsBlocks.REDSTONE_TORCH_LEVER.get());
 
         addToColoredBlocks(event, InfinityButtonsBlocks.WHITE_CONCRETE_POWDER_BUTTON.get());
