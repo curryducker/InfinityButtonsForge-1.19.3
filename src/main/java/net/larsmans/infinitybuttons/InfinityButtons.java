@@ -10,8 +10,17 @@ import net.larsmans.infinitybuttons.config.InfinityButtonsConfig;
 import net.larsmans.infinitybuttons.config.InfinityButtonsConfigMenu;
 import net.larsmans.infinitybuttons.events.CreativeTabEvents;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
+import net.larsmans.infinitybuttons.item.custom.SafeEmergencyButtonItem;
 import net.larsmans.infinitybuttons.network.IBPacketHandler;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
+import net.minecraft.core.BlockSource;
+import net.minecraft.core.dispenser.DispenseItemBehavior;
+import net.minecraft.core.dispenser.OptionalDispenseItemBehavior;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,6 +29,7 @@ import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -93,5 +103,16 @@ public class InfinityButtons
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         IBPacketHandler.register();
+
+        for (Item safe : ForgeRegistries.ITEMS.getValues()) {
+            if (safe instanceof SafeEmergencyButtonItem) {
+                DispenserBlock.registerBehavior(safe, new OptionalDispenseItemBehavior() {
+                    protected ItemStack execute(BlockSource blockSource, ItemStack itemStack) {
+                        this.setSuccess(ArmorItem.dispenseArmor(blockSource, itemStack));
+                        return itemStack;
+                    }
+                });
+            }
+        }
     }
 }
