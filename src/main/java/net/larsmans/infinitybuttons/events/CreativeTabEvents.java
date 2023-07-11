@@ -7,6 +7,7 @@ import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -405,6 +406,7 @@ public class CreativeTabEvents {
                         }
                         output.accept(new ItemStack(InfinityButtonsBlocks.LAMP_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.LAMP_LEVER.get()));
+                        output.accept(new ItemStack(InfinityButtonsBlocks.LETTER_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.LANTERN_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.LANTERN_LEVER.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.SOUL_LANTERN_BUTTON.get()));
@@ -446,24 +448,90 @@ public class CreativeTabEvents {
         addAfterInBuildingBlocks(event, Items.CRIMSON_BUTTON, InfinityButtonsBlocks.CRIMSON_LARGE_BUTTON.get());
         addAfterInBuildingBlocks(event, Items.WARPED_BUTTON, InfinityButtonsBlocks.WARPED_LARGE_BUTTON.get());
         addAfterInBuildingBlocks(event, Items.STONE_BUTTON, InfinityButtonsBlocks.STONE_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event, Items.GRANITE_WALL, InfinityButtonsBlocks.GRANITE_BUTTON.get());
-        addAfterInBuildingBlocks(event, InfinityButtonsBlocks.GRANITE_BUTTON.get().asItem(), InfinityButtonsBlocks.GRANITE_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event, Items.DIORITE_WALL, InfinityButtonsBlocks.DIORITE_BUTTON.get());
-        addAfterInBuildingBlocks(event, InfinityButtonsBlocks.DIORITE_BUTTON.get().asItem(), InfinityButtonsBlocks.DIORITE_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event, Items.ANDESITE_WALL, InfinityButtonsBlocks.ANDESITE_BUTTON.get());
-        addAfterInBuildingBlocks(event, InfinityButtonsBlocks.ANDESITE_BUTTON.get().asItem(), InfinityButtonsBlocks.ANDESITE_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event, Items.PRISMARINE_WALL, InfinityButtonsBlocks.PRISMARINE_BUTTON.get());
-        addAfterInBuildingBlocks(event, InfinityButtonsBlocks.PRISMARINE_BUTTON.get().asItem(), InfinityButtonsBlocks.PRISMARINE_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event, Items.PRISMARINE_BRICK_SLAB, InfinityButtonsBlocks.PRISMARINE_BRICK_BUTTON.get());
-        addAfterInBuildingBlocks(event, InfinityButtonsBlocks.PRISMARINE_BRICK_BUTTON.get().asItem(), InfinityButtonsBlocks.PRISMARINE_BRICK_LARGE_BUTTON.get());
-        addAfterInBuildingBlocks(event, Items.DARK_PRISMARINE_SLAB, InfinityButtonsBlocks.DARK_PRISMARINE_BUTTON.get());
-        addAfterInBuildingBlocks(event, InfinityButtonsBlocks.DARK_PRISMARINE_BUTTON.get().asItem(), InfinityButtonsBlocks.DARK_PRISMARINE_LARGE_BUTTON.get());
+        addMultipleAfterInBuildingBlocks(event, Items.GRANITE_WALL, new ItemLike[]{
+                InfinityButtonsBlocks.GRANITE_BUTTON.get(),
+                InfinityButtonsBlocks.GRANITE_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInBuildingBlocks(event, Items.DIORITE_WALL, new ItemLike[]{
+                InfinityButtonsBlocks.DIORITE_BUTTON.get(),
+                InfinityButtonsBlocks.DIORITE_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInBuildingBlocks(event, Items.ANDESITE_WALL, new ItemLike[]{
+                InfinityButtonsBlocks.ANDESITE_BUTTON.get(),
+                InfinityButtonsBlocks.ANDESITE_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInBuildingBlocks(event, Items.PRISMARINE_WALL, new ItemLike[]{
+                InfinityButtonsBlocks.PRISMARINE_BUTTON.get(),
+                InfinityButtonsBlocks.PRISMARINE_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInBuildingBlocks(event, Items.PRISMARINE_BRICK_SLAB, new ItemLike[]{
+                InfinityButtonsBlocks.PRISMARINE_BRICK_BUTTON.get(),
+                InfinityButtonsBlocks.PRISMARINE_BRICK_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInBuildingBlocks(event, Items.DARK_PRISMARINE_SLAB, new ItemLike[]{
+                InfinityButtonsBlocks.DARK_PRISMARINE_BUTTON.get(),
+                InfinityButtonsBlocks.DARK_PRISMARINE_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInBuildingBlocks(event, Items.DIORITE_WALL, new ItemLike[]{
+                InfinityButtonsBlocks.DIORITE_BUTTON.get(),
+                InfinityButtonsBlocks.DIORITE_LARGE_BUTTON.get(),
+        });
         addAfterInBuildingBlocks(event, Items.POLISHED_BLACKSTONE_BUTTON, InfinityButtonsBlocks.POLISHED_BLACKSTONE_LARGE_BUTTON.get());
 
-        addAfterInRedstone(event, Items.STONE_BUTTON, InfinityButtonsBlocks.COPPER_BUTTON.get());
-        addAfterInRedstone(event, InfinityButtonsBlocks.COPPER_BUTTON.get().asItem(), InfinityButtonsBlocks.WAXED_COPPER_BUTTON.get());
-        addAfterInRedstone(event, InfinityButtonsBlocks.WAXED_COPPER_BUTTON.get().asItem(), InfinityButtonsBlocks.STICKY_COPPER_BUTTON.get());
+        addMultipleAfterInBuildingBlocks(event, Items.HEAVY_WEIGHTED_PRESSURE_PLATE, new ItemLike[]{
+                InfinityButtonsBlocks.IRON_BUTTON.get(),
+                InfinityButtonsBlocks.IRON_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInBuildingBlocks(event, Items.LIGHT_WEIGHTED_PRESSURE_PLATE, new ItemLike[]{
+                InfinityButtonsBlocks.GOLD_BUTTON.get(),
+                InfinityButtonsBlocks.GOLD_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInBuildingBlocks(event, Items.CUT_COPPER_SLAB, new ItemLike[]{
+                InfinityButtonsBlocks.COPPER_BUTTON.get(),
+                InfinityButtonsBlocks.COPPER_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInBuildingBlocks(event, Items.EXPOSED_CUT_COPPER_SLAB, new ItemLike[]{
+                InfinityButtonsBlocks.EXPOSED_COPPER_BUTTON.get(),
+                InfinityButtonsBlocks.EXPOSED_COPPER_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInBuildingBlocks(event, Items.WEATHERED_CUT_COPPER_SLAB, new ItemLike[]{
+                InfinityButtonsBlocks.WEATHERED_COPPER_BUTTON.get(),
+                InfinityButtonsBlocks.WEATHERED_COPPER_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInBuildingBlocks(event, Items.OXIDIZED_CUT_COPPER_SLAB, new ItemLike[]{
+                InfinityButtonsBlocks.OXIDIZED_COPPER_BUTTON.get(),
+                InfinityButtonsBlocks.OXIDIZED_COPPER_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInBuildingBlocks(event, Items.WAXED_CUT_COPPER_SLAB, new ItemLike[]{
+                InfinityButtonsBlocks.WAXED_COPPER_BUTTON.get(),
+                InfinityButtonsBlocks.WAXED_COPPER_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInBuildingBlocks(event, Items.WAXED_EXPOSED_CUT_COPPER_SLAB, new ItemLike[]{
+                InfinityButtonsBlocks.WAXED_EXPOSED_COPPER_BUTTON.get(),
+                InfinityButtonsBlocks.WAXED_EXPOSED_COPPER_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInBuildingBlocks(event, Items.WAXED_WEATHERED_CUT_COPPER_SLAB, new ItemLike[]{
+                InfinityButtonsBlocks.WAXED_WEATHERED_COPPER_BUTTON.get(),
+                InfinityButtonsBlocks.WAXED_WEATHERED_COPPER_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInBuildingBlocks(event, Items.WAXED_OXIDIZED_CUT_COPPER_SLAB, new ItemLike[]{
+                InfinityButtonsBlocks.WAXED_OXIDIZED_COPPER_BUTTON.get(),
+                InfinityButtonsBlocks.WAXED_OXIDIZED_COPPER_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInRedstone(event, Items.STONE_BUTTON, new ItemLike[]{
+                InfinityButtonsBlocks.WAXED_COPPER_LARGE_BUTTON.get(),
+                InfinityButtonsBlocks.STICKY_COPPER_LARGE_BUTTON.get(),
+        });
         addAfterInRedstone(event, Items.REDSTONE_TORCH, InfinityButtonsBlocks.REDSTONE_TORCH_LEVER.get());
+        addMultipleAfterInRedstone(event, Items.HEAVY_WEIGHTED_PRESSURE_PLATE, new ItemLike[]{
+                InfinityButtonsBlocks.GOLD_LARGE_BUTTON.get(),
+                InfinityButtonsBlocks.IRON_LARGE_BUTTON.get(),
+                InfinityButtonsBlocks.EMERALD_LARGE_BUTTON.get(),
+        });
+        addMultipleAfterInRedstone(event, Items.REDSTONE_LAMP, new ItemLike[]{
+                InfinityButtonsBlocks.LAMP_BUTTON.get(),
+                InfinityButtonsBlocks.LAMP_LEVER.get(),
+        });
 
         addToColoredBlocks(event, InfinityButtonsBlocks.WHITE_CONCRETE_POWDER_BUTTON.get());
         addToColoredBlocks(event, InfinityButtonsBlocks.LIGHT_GRAY_CONCRETE_POWDER_BUTTON.get());
@@ -536,15 +604,27 @@ public class CreativeTabEvents {
         addToColoredBlocks(event, InfinityButtonsBlocks.FANCY_SAFE_EMERGENCY_BUTTON.get());
     }
 
-    private static void addAfterInBuildingBlocks(CreativeModeTabEvent.BuildContents event, Item item, Block block) {
+    public static void addMultipleAfterInBuildingBlocks(CreativeModeTabEvent.BuildContents event, ItemLike afterItem, ItemLike[] list) {
+        addAfterInBuildingBlocks(event, afterItem, list[0]);
+        for (int i = 1; i < list.length; i++)
+            addAfterInBuildingBlocks(event, list[i - 1], list[i]);
+    }
+
+    public static void addMultipleAfterInRedstone(CreativeModeTabEvent.BuildContents event, ItemLike afterItem, ItemLike[] list) {
+        addAfterInRedstone(event, afterItem, list[0]);
+        for (int i = 1; i < list.length; i++)
+            addAfterInRedstone(event, list[i - 1], list[i]);
+    }
+
+    private static void addAfterInBuildingBlocks(CreativeModeTabEvent.BuildContents event, ItemLike afterItem, ItemLike newItem) {
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.getEntries().putAfter(new ItemStack(item), new ItemStack(block), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(afterItem), new ItemStack(newItem), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
 
-    private static void addAfterInRedstone(CreativeModeTabEvent.BuildContents event, Item item, Block block) {
+    private static void addAfterInRedstone(CreativeModeTabEvent.BuildContents event, ItemLike afterItem, ItemLike newItem) {
         if (event.getTab() == CreativeModeTabs.REDSTONE_BLOCKS) {
-            event.getEntries().putAfter(new ItemStack(item), new ItemStack(block), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(afterItem), new ItemStack(newItem), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
 
