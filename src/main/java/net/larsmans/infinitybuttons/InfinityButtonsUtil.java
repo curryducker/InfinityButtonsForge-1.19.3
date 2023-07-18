@@ -5,7 +5,9 @@ import com.google.common.collect.BiMap;
 import com.google.common.collect.ImmutableBiMap;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
+import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyButton;
 import net.larsmans.infinitybuttons.config.InfinityButtonsConfig;
+import net.larsmans.infinitybuttons.item.custom.SafeEmergencyButtonItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
@@ -22,7 +24,9 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.registries.RegistryObject;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
@@ -32,6 +36,8 @@ public class InfinityButtonsUtil {
 
     public static final MutableComponent HOLD_SHIFT_TEXT = Component.translatable("infinitybuttons.tooltip.hold_shift").withStyle(ChatFormatting.GRAY);
     public static final MutableComponent SAFE_EMERGENCY_BUTTON_ACTIONBAR_TEXT = Component.translatable("infinitybuttons.actionbar.closed_safety_button");
+
+    public static List<SafeEmergencyButtonItem> SAFETY_BUTTONS;
 
     public static Supplier<BiMap<Block, Block>> NEXT_BY_BLOCK;
     public static Supplier<BiMap<Block, Block>> PREVIOUS_BY_BLOCK;
@@ -122,6 +128,15 @@ public class InfinityButtonsUtil {
                     .put(InfinityButtonsBlocks.WAXED_WEATHERED_COPPER_LARGE_BUTTON.get(), InfinityButtonsBlocks.STICKY_WEATHERED_COPPER_LARGE_BUTTON.get())
                     .put(InfinityButtonsBlocks.WAXED_OXIDIZED_COPPER_LARGE_BUTTON.get(), InfinityButtonsBlocks.STICKY_OXIDIZED_COPPER_LARGE_BUTTON.get()).build());
             STICKY_OFF_BY_BLOCK = Suppliers.memoize(() -> STICKY_ON_BY_BLOCK.get().inverse());
+        }
+    }
+
+    public static void buildSafety() {
+        if (SAFETY_BUTTONS == null) {
+            SAFETY_BUTTONS = new ArrayList<>();
+            for (RegistryObject<? extends Block> entry : InfinityButtonsBlocks.BLOCKS.getEntries())
+                if (entry.get() instanceof SafeEmergencyButton)
+                    SAFETY_BUTTONS.add((SafeEmergencyButtonItem) entry.get().asItem());
         }
     }
 }
