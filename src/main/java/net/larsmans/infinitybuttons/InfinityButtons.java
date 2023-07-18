@@ -12,6 +12,7 @@ import net.larsmans.infinitybuttons.events.CreativeTabEvents;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.larsmans.infinitybuttons.item.custom.SafeEmergencyButtonItem;
 import net.larsmans.infinitybuttons.network.IBPacketHandler;
+import net.larsmans.infinitybuttons.particle.InfinityButtonsParticleTypes;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.core.BlockSource;
 import net.minecraft.core.dispenser.DispenseItemBehavior;
@@ -48,6 +49,7 @@ public class InfinityButtons
         InfinityButtonsItems.register(eventBus);
         InfinityButtonsBlocks.register(eventBus);
         InfinityButtonsSounds.register(eventBus);
+        InfinityButtonsParticleTypes.register(eventBus);
         InfinityButtonsTriggers.register();
 
         if (ModList.get().isLoaded("nethersdelight")) {
