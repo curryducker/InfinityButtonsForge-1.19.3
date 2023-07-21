@@ -1,7 +1,6 @@
 package net.larsmans.infinitybuttons.block.custom.secretbutton.compat;
 
 import net.larsmans.infinitybuttons.block.custom.secretbutton.ChiseledNetherBrickSecretButton;
-import net.larsmans.infinitybuttons.block.custom.secretbutton.ChiseledStoneBrickSecretButton;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;

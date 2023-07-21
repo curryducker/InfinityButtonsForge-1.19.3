@@ -1,7 +1,6 @@
 package net.larsmans.infinitybuttons.block.custom;
 
 import net.larsmans.infinitybuttons.block.custom.button.AbstractWallButton;
-import net.larsmans.infinitybuttons.compat.NethersDelightItems;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ItemStack;
@@ -9,7 +8,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class HoglinMountButton extends AbstractWallButton {
