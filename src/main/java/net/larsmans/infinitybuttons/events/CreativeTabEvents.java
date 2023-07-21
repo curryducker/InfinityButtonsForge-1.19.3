@@ -407,6 +407,7 @@ public class CreativeTabEvents {
                         output.accept(new ItemStack(InfinityButtonsBlocks.LAMP_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.LAMP_LEVER.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.LETTER_BUTTON.get()));
+                        output.accept(new ItemStack(InfinityButtonsBlocks.LETTER_LEVER.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.LANTERN_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.LANTERN_LEVER.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.SOUL_LANTERN_BUTTON.get()));
