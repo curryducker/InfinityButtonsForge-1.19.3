@@ -3,7 +3,6 @@ package net.larsmans.infinitybuttons.block.custom.letterbutton;
 import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.block.custom.button.AbstractLeverableButton;
 import net.larsmans.infinitybuttons.block.custom.button.LargeButtonShape;
-import net.larsmans.infinitybuttons.block.custom.letterbutton.gui.LetterButtonGui;
 import net.larsmans.infinitybuttons.network.IBPacketHandler;
 import net.larsmans.infinitybuttons.network.packets.LetterButtonScreenPacket;
 import net.minecraft.client.Minecraft;
