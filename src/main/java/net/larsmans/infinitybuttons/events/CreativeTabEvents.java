@@ -404,7 +404,7 @@ public class CreativeTabEvents {
 
                         output.accept(new ItemStack(InfinityButtonsBlocks.DOORBELL.get()));
                         output.accept(new ItemStack(InfinityButtonsBlocks.DOORBELL_BUTTON.get()));
-                        if (ModList.get().isLoaded("nethers_delight")) {
+                        if (ModList.get().isLoaded("nethersdelight")) {
                             output.accept(new ItemStack(NethersDelightBlocks.HOGLIN_MOUNT_BUTTON.get()));
                         }
                         output.accept(new ItemStack(InfinityButtonsBlocks.LAMP_BUTTON.get()));
@@ -431,7 +431,7 @@ public class CreativeTabEvents {
                         output.accept(new ItemStack(InfinityButtonsItems.SOUL_TORCH_LEVER.get()));
                         output.accept(new ItemStack(InfinityButtonsItems.REDSTONE_TORCH_BUTTON.get()));
                         output.accept(new ItemStack(InfinityButtonsItems.REDSTONE_TORCH_LEVER.get()));
-                        if (ModList.get().isLoaded("nethers_delight")) {
+                        if (ModList.get().isLoaded("nethersdelight")) {
                             output.accept(new ItemStack(NethersDelightItems.PROPELPLANT_TORCH_BUTTON.get()));
                             output.accept(new ItemStack(NethersDelightItems.PROPELPLANT_TORCH_LEVER.get()));
                         }
