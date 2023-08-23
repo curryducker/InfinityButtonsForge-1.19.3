@@ -16,7 +16,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
-import org.spongepowered.asm.mixin.injection.At;
 
 public class CreativeTabEvents {
     public static CreativeModeTab INFINITYBUTTONS;
